@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player_id: one
+  score: 1
+  —no-test-framework: MyString
+
+two:
+  player_id: two
+  score: 1
+  —no-test-framework: MyString
