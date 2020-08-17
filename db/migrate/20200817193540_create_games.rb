@@ -3,7 +3,7 @@ class CreateGames < ActiveRecord::Migration[6.0]
     create_table :games do |t|
       t.references :player, foreign_key: true
       t.integer :score
-      t.string :—no-test-framework
+      
 
       t.timestamps
     end
