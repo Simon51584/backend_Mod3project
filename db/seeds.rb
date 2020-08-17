@@ -7,3 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+Player.destroy_all
+Game.destroy_all
+
+10.times do
+Player.create(name: Faker::Name.name,img_url: Faker::Avatar.image)
+end 
+
+20.times do
+Game.create(player: Player.all.sample ,score: Faker::Number.number(digits: 6))
+end 
