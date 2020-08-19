@@ -12,12 +12,20 @@ class PlayersController < ApplicationController
 
     def update
         player = Player.find(params[:id])
-        
+        player.update(new_player_params)
         render json: player
         
     end
 
     def destroy
+        player = Player.find(params[:id])
+
+        begin
+            player.destroy
+            render json: { message: 'success' }
+        rescue
+            render  json: {error: 'unable to delete'}
+        end
     
     end
 
