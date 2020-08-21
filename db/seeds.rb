@@ -15,5 +15,5 @@ Player.create(name: Faker::Name.name,img_url: Faker::Avatar.image)
 end 
 
 20.times do
-Game.create(player: Player.all.sample ,score: Faker::Number.number(digits: 6))
+Game.create(player: Player.all.sample ,score: Faker::Number.number(digits: 3))
 end 
